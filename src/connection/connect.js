@@ -1,7 +1,7 @@
 let { createClient } = require('krpc-node')
 
-const execute = async() => {
-    const client = await createClient({
+const getClient = () => {
+    createClient({
         rpc: { //default values ​​for connection with krpc
             protocol: 'ws', //protocol used is WebSockets
             host: 'localhost',
@@ -10,4 +10,4 @@ const execute = async() => {
     })
 }
 
-execute()
+module.exports = getClient
