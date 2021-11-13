@@ -18,7 +18,6 @@
     },
     "homepage": "https://github.com/souz4s/rocket-control#readme",
     "dependencies": {
-        "krpc-node": "^4.0.2",
-        "lowdb": "^3.0.0"
+        "krpc-node": "^4.0.2"
     }
 }
