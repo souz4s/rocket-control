@@ -1,6 +1,6 @@
 const telemetry = require('./telemetry') //importing telemetry data
 
-const run = async() => {
+const run = async() => { //commands sent to the rocket
     await telemetry()
 }
 
