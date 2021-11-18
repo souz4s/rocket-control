@@ -20,23 +20,38 @@ const telemetry = async() => { //connecting telemetry data to krpc
 
             //setting data for telemetry
             let getThrottleCall = spaceCenter.controlGetThrottle(control.id)
-            let getHeadingCall = spaceCenter.flightGetHeading(flight.id)
+            let getSpeedCall = spaceCenter.flightGetEquivalentAirSpeed(flight.id)
+            let getMachCall = spaceCenter.flightGetMach(flight.id)
             let getElevationCall = spaceCenter.flightGetElevation(flight.id)
-            let response = await client.send([getThrottleCall, getHeadingCall, getElevationCall])
+            let getAltitudeCall = spaceCenter.flightGetMeanAltitude(flight.id)
+            let getMass = spaceCenter.vesselGetMass(vessel.id)
+            let getAtmosphereCall = spaceCenter.flightGetAtmosphereDensity(flight.id)
+            let response = await client.send([getThrottleCall, getSpeedCall, getMachCall, getElevationCall, getAltitudeCall, getMass, getAtmosphereCall])
 
             //taking the respective values
             var throttle = response.results[0].value
-            var heading = response.results[1].value
-            var elevation = response.results[2].value
+            var speed = response.results[1].value
+            var mach = response.results[2].value
+            var elevation = response.results[3].value
+            var altitude = response.results[4].value
+            var mass = response.results[5].value
+            var atmosphere = response.results[6].value
 
             //printing telemetry information
-            console.log({ throttle, heading, elevation })
+            console.log({
+                throttle,
+                speed,
+                mach,
+                elevation,
+                altitude,
+                mass,
+                atmosphere
+            })
         } catch (err) {
             client.close()
             console.log(err)
         }
         await sleep(1000)
-
     }
 }
 
