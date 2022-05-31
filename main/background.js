@@ -16,9 +16,6 @@ if (isProd) {
   const mainWindow = createWindow('main', {
     width: 800,
     height: 600,
-    webPreferences: {
-      devTools: false
-    }
   });
 
   mainWindow.resizable = false;
@@ -26,7 +23,6 @@ if (isProd) {
 
   const port = process.argv[2];
   await mainWindow.loadURL(`http://localhost:${port}`);
-  mainWindow.webContents.openDevTools();
 })();
 
 app.on('window-all-closed', () => {
