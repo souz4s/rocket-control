@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/styled-components": "^5.1.25",
     "krpc-node": "^4.0.2",
     "next": "12.1.6",
     "react": "18.1.0",
