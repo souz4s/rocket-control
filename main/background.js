@@ -16,15 +16,17 @@ if (isProd) {
   const mainWindow = createWindow('main', {
     width: 800,
     height: 600,
+    webPreferences: {
+      devTools: false
+    }
   });
 
-  if (isProd) {
-    await mainWindow.loadURL('app://./Home.html');
-  } else {
-    const port = process.argv[2];
-    await mainWindow.loadURL(`http://localhost:${port}`);
-    mainWindow.webContents.openDevTools();
-  }
+  mainWindow.resizable = false;
+  mainWindow.setMenuBarVisibility(false);
+
+  const port = process.argv[2];
+  await mainWindow.loadURL(`http://localhost:${port}`);
+  mainWindow.webContents.openDevTools();
 })();
 
 app.on('window-all-closed', () => {
