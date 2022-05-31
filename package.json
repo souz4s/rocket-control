@@ -12,7 +12,7 @@
   "dependencies": {
     "electron-serve": "^1.1.0",
     "electron-store": "^8.0.1",
-    "krpc-node": "^1.0.3",
+    "krpc-node": "^4.0.2",
     "next": "12.1.6",
     "react": "18.1.0",
     "react-dom": "18.1.0",
