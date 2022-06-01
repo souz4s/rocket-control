@@ -1,20 +1,13 @@
 import Head from "next/head";
-import axios from "axios";
+import Button from "./components/Button";
 
 const Home: React.FC = () => {
-  const connect = async () => {
-    const response = await axios.get(`http://localhost:8888/api/controller/connect`);
-
-    return response;
-  }
-
-  const init = connect();
-
   return (
     <>
       <Head>
         <title>Rocket Control</title>
       </Head>
+      <Button />
       <main />
       <footer />
     </>
