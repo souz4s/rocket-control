@@ -15,10 +15,14 @@ if (isProd) {
 
   const mainWindow = createWindow('main', {
     width: 800,
-    height: 600
+    height: 600,
+    minWidth: 795,
+    minHeight: 595,
+    maxWidth: 805,
+    maxHeight: 605,
+    center: true,
   });
 
-  mainWindow.resizable = false;
   mainWindow.setMenuBarVisibility(false);
 
   const port = process.argv[2];
