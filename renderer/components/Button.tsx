@@ -1,4 +1,4 @@
-import { StartButton } from "../../../styles/button";
+import { StartButton } from "../../styles/button";
 import axios from "axios";
 
 const Button: React.FC = () => {
