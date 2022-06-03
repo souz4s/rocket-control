@@ -8,8 +8,6 @@ const Home: React.FC = () => {
         <title>Rocket Control</title>
       </Head>
       <Button />
-      <main />
-      <footer />
     </>
   );
 };
