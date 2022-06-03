@@ -1,6 +1,6 @@
 import createClient from "krpc-node";
 
-const connect = async () => {
+export const connect = async () => {
   const client = await createClient({
     rpc: {
       protocol: "ws",
@@ -9,5 +9,3 @@ const connect = async () => {
     },
   });
 };
-
-export { connect };
