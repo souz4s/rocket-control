@@ -1,4 +1,4 @@
-import { StartButton } from "../styles/button";
+import * as ButtonStyle from "../styles/button";
 import axios from "axios";
 
 const Button: React.FC = () => {
@@ -10,7 +10,7 @@ const Button: React.FC = () => {
 
   return (
     <>
-      <StartButton onClick={connect}> CONNECT </StartButton>
+      <ButtonStyle.StartButton onClick={connect}> CONNECT </ButtonStyle.StartButton>
     </>
   );
 };

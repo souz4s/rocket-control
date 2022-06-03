@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StartButton = styled.button`
+export const StartButton = styled.button`
   position: absolute;
   width: 150px;
   height: 50px;
@@ -14,5 +14,3 @@ const StartButton = styled.button`
   line-height: 15px;
   color: #ffffff;
 `;
-
-export { StartButton };
