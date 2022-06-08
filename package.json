@@ -15,6 +15,7 @@
     "electron-store": "^8.0.1",
     "krpc-node": "^4.0.2",
     "next": "12.1.6",
+    "nextron": "^8.1.0",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "styled-components": "^5.3.5"
@@ -28,7 +29,6 @@
     "electron-builder": "^23.0.3",
     "eslint": "8.16.0",
     "eslint-config-next": "12.1.6",
-    "nextron": "^8.1.0",
     "typescript": "4.7.2"
   }
 }
