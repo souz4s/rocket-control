@@ -1,3 +1,4 @@
+// @ts-ignore
 import createClient from "krpc-node";
 
 export const connect = async () => {

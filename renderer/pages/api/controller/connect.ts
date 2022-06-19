@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { connect } from "../../../functions/connect";
+import { connect } from "@/functions/connect";
 
 export default function common(req: NextApiRequest, res: NextApiResponse) {
   const client = async () => {
