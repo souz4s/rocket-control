@@ -1,4 +1,4 @@
-import * as ButtonStyle from "../styles/button";
+import * as ButtonStyle from "@/view/components/button";
 import axios from "axios";
 
 const Button: React.FC = () => {
