@@ -1,4 +1,4 @@
-import "@/presentation/styles";
+import "@/view/styles";
 import type { AppProps } from "next/app";
 
 function MyApp({ Component, pageProps }: AppProps) {
