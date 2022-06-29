@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Button from "@/presentation/components/Button";
+import Button from "@/view/components/button";
 
 const Home: React.FC = () => {
   return (

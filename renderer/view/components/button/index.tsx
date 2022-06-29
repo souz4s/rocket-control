@@ -1,4 +1,4 @@
-import { StartButton } from "@/view/components/button";
+import { StartButton } from "./styles";
 import axios from "axios";
 
 const Button: React.FC = () => {
