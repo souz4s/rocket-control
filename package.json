@@ -1,0 +1,20 @@
+{
+  "name": "rocket-control",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/souz4s/rocket-control.git"
+  },
+  "keywords": [],
+  "author": "souz4s",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/souz4s/rocket-control/issues"
+  },
+  "homepage": "https://github.com/souz4s/rocket-control#readme"
+}
