@@ -7,7 +7,7 @@ config();
 
 export const krpcClient = {
   async createConnection() {
-    await createClient({
+    return await createClient({
       rpc: {
         protocol: process.env.PROTOCOL,
         host: process.env.HOST,
@@ -16,7 +16,7 @@ export const krpcClient = {
     });
   },
 
-  async getConnection() {
-    return spaceCenter();
+  getConnection() {
+    return spaceCenter;
   },
 };
