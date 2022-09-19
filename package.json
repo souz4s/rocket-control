@@ -57,5 +57,8 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "krpc-node": "^4.0.2"
   }
 }
