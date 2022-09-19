@@ -1,6 +1,6 @@
 /* eslint-disable */
 // @ts-ignore
-import { createClient } from "krpc-node";
+import { createClient, spaceCenter } from "krpc-node";
 import { config } from "dotenv";
 
 config();
@@ -14,5 +14,9 @@ export const krpcClient = {
         port: process.env.PORT,
       },
     });
+  },
+
+  async getConnection() {
+    return spaceCenter();
   },
 };
