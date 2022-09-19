@@ -59,6 +59,7 @@
     }
   },
   "dependencies": {
+    "dotenv": "^16.0.2",
     "krpc-node": "^4.0.2"
   }
 }
