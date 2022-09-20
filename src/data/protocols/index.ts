@@ -1,1 +1,1 @@
-export * from "./get-active-vessel-repository";
+export * from "./krpc";
