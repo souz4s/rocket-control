@@ -3,6 +3,9 @@ export interface GetActiveVesselRepository {
 }
 
 export namespace GetActiveVesselRepository {
-  export type Params = { client: object };
+  export type Params = {
+    [x: string]: any;
+    client: object;
+  };
   export type Result = { vessel: string };
 }
