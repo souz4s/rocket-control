@@ -1,0 +1,68 @@
+{
+  "name": "rocket-control",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "prettier --write",
+      "prettier --check",
+      "jest --bail --findRelatedTests --passWithNoTests src/**/*.ts",
+      "npm run lint --fix"
+    ]
+  },
+  "scripts": {
+    "start": "node -r ts-node/register -r tsconfig-paths/register src/main/server.ts",
+    "test": "jest --passWithNoTests --runInBand --no-cache --coverage",
+    "lint": "eslint src/**/*.ts --max-warnings=0",
+    "build": "tsc",
+    "prepare": "husky install",
+    "commit": "cz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/souz4s/rocket-control.git"
+  },
+  "keywords": [],
+  "author": "souz4s",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/souz4s/rocket-control/issues"
+  },
+  "homepage": "https://github.com/souz4s/rocket-control#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@faker-js/faker": "^7.5.0",
+    "@types/jest": "^29.0.3",
+    "@types/node": "^18.7.18",
+    "@typescript-eslint/eslint-plugin": "^5.37.0",
+    "@typescript-eslint/parser": "^5.37.0",
+    "commitizen": "^4.2.5",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.23.1",
+    "husky": "^8.0.0",
+    "jest": "^29.0.3",
+    "lint-staged": "^13.0.3",
+    "prettier": "2.7.1",
+    "ts-jest": "^29.0.1",
+    "tsconfig-paths": "^4.1.0",
+    "typescript": "^4.8.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "dotenv": "^16.0.2",
+    "krpc-node": "^4.0.2"
+  }
+}
