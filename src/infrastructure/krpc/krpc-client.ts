@@ -1,4 +1,4 @@
-/* eslint-disable */
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import { createClient, spaceCenter } from "krpc-node";
 import { config } from "dotenv";
