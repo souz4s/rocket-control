@@ -1,4 +1,3 @@
-/* eslint-disable */
 import { GetActiveVesselRepository } from "@/data/protocols";
 import { krpcClient } from "@/infrastructure/krpc";
 
