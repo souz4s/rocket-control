@@ -2,6 +2,12 @@ import { InternalServerError } from "@/presentation/erros";
 import { HttpResponse } from "@/presentation/protocols";
 
 export class HttpHelper {
+  static OK = <T>(data: T, message?: string): HttpResponse<T> => ({
+    statusCode: 200,
+    body: data,
+    message,
+  });
+
   static BAD_REQUEST = (err: Error): HttpResponse<Error> => ({
     statusCode: 400,
     body: err,
