@@ -4,9 +4,7 @@ import { GetActiveVesselRepository } from "@/data/protocols";
 export class KrpcGetActiveVessel implements GetActiveVessel {
   constructor(private readonly getActiveVesselRepository: GetActiveVesselRepository) {}
   perform = async (params: GetActiveVessel.Params): Promise<GetActiveVessel.Result> => {
-    const createResult = await this.getActiveVesselRepository.getActiveVessel({
-      client: params.client,
-    });
+    const createResult = await this.getActiveVesselRepository.getActiveVessel(params);
     return { vessel: createResult.vessel };
   };
 }

@@ -3,6 +3,6 @@ export interface GetActiveVessel {
 }
 
 export namespace GetActiveVessel {
-  export type Params = { client: object };
+  export type Params = { [client: string]: any };
   export type Result = { vessel: string };
 }
