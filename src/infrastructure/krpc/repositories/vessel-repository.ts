@@ -1,4 +1,4 @@
-import { GetActiveVesselRepository } from "@/data/protocols";
+import { GetActiveVesselRepository } from "@/data/protocols/krpc";
 import { krpcClient } from "@/infrastructure/krpc";
 
 export class VesselRepository implements GetActiveVesselRepository {
