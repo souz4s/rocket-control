@@ -8,11 +8,6 @@ export class HttpHelper {
     message,
   });
 
-  static BAD_REQUEST = (err: Error): HttpResponse<Error> => ({
-    statusCode: 400,
-    body: err,
-  });
-
   static INTERNAL_SERVER_ERROR = (err: Error): HttpResponse<Error> => ({
     statusCode: 500,
     body: new InternalServerError(err.stack || ""),
