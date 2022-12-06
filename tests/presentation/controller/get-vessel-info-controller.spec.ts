@@ -14,4 +14,21 @@ describe("GetVesselInfoController", () => {
     await sut.handle(mockVesselParams());
     expect(getVesselInfoSpy.callsCount).toBe(1);
   });
+
+  it("should return the status ok when get vessel info", async () => {
+    const { sut, getVesselInfoSpy } = makeSut();
+    const result = await sut.handle(mockVesselParams());
+    expect(getVesselInfoSpy.callsCount).toBe(1);
+    expect(result.statusCode).toBe(200);
+  });
+
+  it("should return internal server error when getVesselInfo throws error", async () => {
+    const { sut, getVesselInfoSpy } = makeSut();
+    jest.spyOn(getVesselInfoSpy, "perform").mockImplementationOnce(() => {
+      throw new Error().stack;
+    });
+    const result = await sut.handle(mockVesselParams());
+    expect(getVesselInfoSpy.callsCount).toBe(0);
+    expect(result.statusCode).toBe(500);
+  });
 });
