@@ -12,6 +12,7 @@ export const mockVesselResult = (): GetVesselInfo.Result => ({
     apoapsis: Number(faker.random.numeric(5)),
     atmosphereDensity: Number(faker.random.numeric(1)),
     dryMass: Number(faker.random.numeric(3)),
+    gForce: Number(faker.random.numeric(2)),
     latitude: Number(faker.address.latitude()),
     longitude: Number(faker.address.longitude()),
     periapsis: Number(faker.random.numeric(5)),

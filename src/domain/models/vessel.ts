@@ -3,6 +3,7 @@ export type VesselModel = {
   apoapsis: number;
   atmosphereDensity: number;
   dryMass: number;
+  gForce: number;
   latitude: number;
   longitude: number;
   periapsis: number;
