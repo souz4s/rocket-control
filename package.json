@@ -42,6 +42,8 @@
     "@commitlint/config-conventional": "^17.1.0",
     "@faker-js/faker": "^7.5.0",
     "@types/babel__core": "^7.1.19",
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.14",
     "@types/jest": "^29.0.3",
     "@types/node": "^18.7.18",
     "@typescript-eslint/eslint-plugin": "^5.37.0",
@@ -63,7 +65,9 @@
     }
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.0.2",
+    "express": "^4.18.2",
     "krpc-node": "^4.0.2"
   }
 }
