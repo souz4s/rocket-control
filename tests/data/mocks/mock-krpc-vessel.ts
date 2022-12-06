@@ -6,6 +6,6 @@ export class GetVesselInfoRepositorySpy implements GetVesselInfoRepository {
   result = mockVesselResult();
   getVesselInfo = async (params: GetVesselInfoRepository.Params): Promise<GetVesselInfoRepository.Result> => {
     this.params = params;
-    return { vessel: this.result?.vessel };
+    return { vessel: this.result.vessel };
   };
 }
