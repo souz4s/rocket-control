@@ -16,6 +16,6 @@ export class GetVesselInfoController implements Controller {
 
 export namespace GetVesselInfoController {
   export type Request = {
-    client: any;
+    [client: string]: any;
   };
 }
