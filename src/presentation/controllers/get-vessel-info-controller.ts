@@ -1,6 +1,6 @@
 import { GetVesselInfo } from "@/domain/use-cases";
-import { Controller } from "@/presentation/protocols";
 import { HttpHelper } from "@/presentation/helpers";
+import { Controller } from "@/presentation/protocols";
 
 export class GetVesselInfoController implements Controller {
   constructor(private readonly getVesselInfo: GetVesselInfo) {}
