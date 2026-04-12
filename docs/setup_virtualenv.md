@@ -5,13 +5,13 @@
 1. **Create a virtual environment:**
 
    ```bash
-   python -m venv venv
+   python -m venv .venv
    ```
 
 2. **Activate the virtual environment in Git Bash:**
 
    ```bash
-   source venv/Scripts/activate
+   source .venv/Scripts/activate
    ```
 
 3. **Install dependencies:**
