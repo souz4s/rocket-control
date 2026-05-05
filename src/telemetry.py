@@ -33,10 +33,12 @@ def get_telemetry(vessel):
         ],
 
         # Flight data
-        "Throttle": vessel.control.throttle,
         "Situation": vessel.situation.name,
-        "Control": vessel.comms.can_communicate,
         "Signal Strength": vessel.comms.signal_strength,
+        "Control": vessel.comms.can_communicate,
+        "Throttle": vessel.control.throttle,
+        "Pitch": vessel.flight().pitch,
+        "Heading": vessel.flight().heading,
     }
 
 
