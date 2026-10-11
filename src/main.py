@@ -3,7 +3,7 @@ import time
 
 import krpc
 
-from .stages.zahtes_coupler import auto_stage
+from stages.zahtes_coupler import auto_stage
 from telemetry import get_telemetry, plot_realtime_telemetry
 
 conn = krpc.connect(name="KSP Telemetry")
