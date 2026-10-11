@@ -32,9 +32,9 @@ def print_telemetry():
 print_thread = threading.Thread(target=print_telemetry, daemon=True)
 print_thread.start()
 
-# stage_thread = threading.Thread(
-#     target=auto_stage, args=(vessel,), daemon=True)
-# stage_thread.start()
+stage_thread = threading.Thread(
+    target=auto_stage, args=(vessel,), daemon=True)
+stage_thread.start()
 
 
 try:
