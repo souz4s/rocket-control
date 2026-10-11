@@ -1,12 +1,25 @@
+import os
 import threading
 import time
 
 import krpc
+from dotenv import load_dotenv
 
-from stages.zahtes_coupler import auto_stage
+from stages.zahtes import auto_stage
 from telemetry import get_telemetry, plot_realtime_telemetry
 
-conn = krpc.connect(name="KSP Telemetry")
+load_dotenv()
+
+host = os.getenv("KRPC_HOST", "")
+rpc_port = int(os.getenv("KRPC_PORT", ""))
+stream_port = int(os.getenv("KRPC_STREAM_PORT", ""))
+
+conn = krpc.connect(
+    name="KSP Telemetry",
+    address=host,
+    rpc_port=rpc_port,
+    stream_port=stream_port
+)
 vessel = conn.space_center.active_vessel
 
 
@@ -19,9 +32,9 @@ def print_telemetry():
 print_thread = threading.Thread(target=print_telemetry, daemon=True)
 print_thread.start()
 
-stage_thread = threading.Thread(
-    target=auto_stage, args=(vessel,), daemon=True)
-stage_thread.start()
+# stage_thread = threading.Thread(
+#     target=auto_stage, args=(vessel,), daemon=True)
+# stage_thread.start()
 
 
 try:
